@@ -17,6 +17,7 @@
 
         a {
             color: #3cd2e8 !important;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -45,11 +46,11 @@
                         </a>
                         <!-- <a class="p-1 font-medium sm:p-4 text-gray-100" href="/tags">
                             Tags
-                        </a>
+                        </a> -->
                         <a class="p-1 font-medium sm:p-4 text-gray-100" href="/projects">
                             Projects
                         </a>
-                        <a class="p-1 font-medium sm:p-4 text-gray-100" href="/about">
+                        <!-- <a class="p-1 font-medium sm:p-4 text-gray-100" href="/about">
                             About
                         </a> -->
                     </div>
