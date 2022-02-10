@@ -50,9 +50,9 @@
                         <a class="p-1 font-medium sm:p-4 text-gray-100" href="/projects">
                             Projects
                         </a>
-                        <!-- <a class="p-1 font-medium sm:p-4 text-gray-100" href="/about">
+                        <a class="p-1 font-medium sm:p-4 text-gray-100" href="/about">
                             About
-                        </a> -->
+                        </a>
                     </div>
                     <div class="sm:hidden">
                         <button type="button" class="w-8 h-8 py-1 ml-1 mr-1 rounded" aria-label="Toggle Menu">
