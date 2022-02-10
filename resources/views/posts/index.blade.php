@@ -10,7 +10,7 @@
                         Hi, I’m Maged Raslan 👋 
                     </h1>
                     <h2 class="text-lg prose text-gray-400">
-                        Welcome to my portfolio - I am a Backend Developer 👨🏼‍💻 currently focused on the world of web development with PHP, Larave, Vue, Nuxt and JavaScript among others 💚 In my free time, I like developing <a href="/projects">side projects</a> and<a href="/posts"> blogging </a>about them. Have a good read!
+                        Welcome to my portfolio - I am a Backend Developer 👨🏼‍💻 currently focused on the world of web development with PHP, Laravel, Vue, Nuxt and JavaScript among others 💚 In my free time, I like developing <a href="/projects">side projects</a> and<a href="/posts"> blogging </a>about them. Have a good read!
                     </h2>
                 </div>
                 <div class="flex items-center justify-center mx-2 my-12 w-96">
