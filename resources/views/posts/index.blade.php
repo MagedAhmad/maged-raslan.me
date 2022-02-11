@@ -13,17 +13,18 @@
                         Welcome to my portfolio - I am a Backend Developer 👨🏼‍💻 currently focused on the world of web development with PHP, Laravel, Vue, Nuxt and JavaScript among others 💚 In my free time, I like developing <a href="/projects">side projects</a> and<a href="/posts"> blogging </a>about them. Have a good read!
                     </h2>
                 </div>
-                <div class="flex items-center justify-center mx-2 my-12 w-96">
-                    <div class="flex items-center justify-center">
-                        <div class="p-6 bg-gray-800 sm:px-14 sm:py-8">
+                <div class="flex items-center justify-center mx-2 my-12 w-96" >
+                    <div class="flex items-center justify-center" >
+                        <div class="p-6 bg-gray-800 sm:px-14 sm:py-8" >
                             <div>
                                 <div class="pb-1 text-lg font-semibold w-72 text-gray-100">
                                     Stay updated, receive the latest post straight to your mailbox
                                 </div>
-                                <div class="sm:border border-white flex-col sm:flex-row flex items-center w-full mt-12 space-y-4 sm:space-y-0">
-                                    <input class="border border-white sm:border-transparent text-base w-full font-medium leading-none text-white p-4 focus:outline-none bg-transparent placeholder-white" placeholder="Email Address" />
+                                <form  action="{{route('feedback.store')}}" method="POST" class="sm:border border-white flex-col sm:flex-row flex items-center w-full mt-12 space-y-4 sm:space-y-0">
+                                    @csrf
+                                    <input required name="email" class="border border-white sm:border-transparent text-base w-full font-medium leading-none text-white p-4 focus:outline-none bg-transparent placeholder-white" placeholder="Email Address" />
                                     <button class="w-full sm:w-auto py-4 px-6" style="background-color:#3cd2e8;">Subscribe</button>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -31,6 +32,11 @@
             </div>
             <h2 class="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-100 sm:text-3xl md:text-5xl">Latest</h2>
             <hr class="border-gray-700">
+            <div class="mt-3 py-3 -mx-3 overflow-y-auto whitespace-no-wrap scroll-hidden">
+                @foreach($tags as $tag)
+                <a class="text-sm text-gray-700 leading-5 hover:text-blue-600 hover:underline mx-4 md:my-0" href="{{url('tags/' . $tag->id)}}">{{$tag->name}}</a>
+                @endforeach
+            </div>
             <ul class="divide-y divide-gray-700">
                 @foreach($posts as $post)
                 <li class="py-12">
@@ -52,7 +58,7 @@
                                         </h2>
                                         <div class="flex flex-wrap">
                                             @foreach($post->tags as $tag)
-                                            <a class="mr-3 text-sm font-medium uppercase text-primary-500 hover:text-primary-400" href="#">
+                                            <a class="mr-3 text-sm font-medium uppercase text-primary-500 hover:text-primary-400" href="{{url('tags/' . $tag->id)}}">
                                                 {{ $tag->name }}
                                             </a>
                                             @endforeach

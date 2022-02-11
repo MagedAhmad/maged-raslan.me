@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FeedbackController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
@@ -18,7 +19,10 @@ use App\Http\Controllers\PostController;
 Route::get('/', [PostController::class, 'index']);
 
 
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('post/{slug}', [PostController::class, 'single']);
 Route::get('projects', [HomeController::class, 'projects']);
 Route::get('about', [HomeController::class, 'about']);
+Route::post('feedback', [FeedbackController::class, 'store'])->name('feedback.store');
+
+Route::get('tags/{winkTag}', [PostController::class, 'tag']);
